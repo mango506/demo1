@@ -1,0 +1,15 @@
+{
+  "id": "clear-auditable-cxr-foundation-model",
+  "title": "CLEAR: an auditable foundation model for radiology grounded in clinical concepts",
+  "authors": ["Tianyu Han", "Riga Wu", "Yu Tian", "Firas Khader", "Lisa C. Adams", "Keno K. Bressem", "Christos Davatzikos", "Jakob Nikolas Kather", "Li Shen", "David A. Mankoff", "Eduardo Mortani Barbosa", "Daniel Truhn"],
+  "venue": "Nature Biomedical Engineering",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41551-026-01741-4",
+  "abstract": "'Black box' deep learning models for medical image interpretation limit clinical trust and analysis of performance degradation. Here we introduce Concept-Level Embeddings for Auditable Radiology (CLEAR), an auditable foundation model based on clinical concepts. Trained on over 0.87 million image-report pairs from 239,391 patients, CLEAR learns a visual representation and projects chest X-rays into a semantically rich space defined by large language model embeddings, making every prediction decomposable into weighted contributions from individual radiological observations. External validation on four large, physician-annotated datasets from the United States, Europe and Asia shows that CLEAR not only achieves state-of-the-art classification performance but also enables applications: auditable zero-shot pathology detection, systematic identification of radiological confounders and the creation of expert-level concept bottleneck models from data-driven concepts. By integrating clinical knowledge directly into its reasoning process, CLEAR offers a framework for robust model auditing, safer deployment and enhanced physician-AI collaboration, advancing towards trustworthy medical AI.",
+  "axes": ["기관 간 일반화", "다중 소견 판독"],
+  "takeaway": "대규모 흉부 X-ray 파운데이션 모델이 개념 단위 임베딩으로 예측을 설명 가능하게 만들면서도 미국, 유럽, 아시아 4개 외부 데이터셋에서 최고 수준의 분류 성능을 달성했다.",
+  "relevance": "우리 코호트는 흉부 X-ray 272건이 5개 기관, 9개 장비에서 수집되었고 무소견 145건 외에 침윤, 무기폐, 결절 등 다양한 단일·복합 소견이 섞여 있어, 여러 기관·장비에 걸친 일반화 성능과 다중 소견 동시 판독이 실제로 문제되는 세팅이다.",
+  "caveat": "우리 데이터는 합성(is_synthetic=true) 라벨 기반 소규모 코호트로, CLEAR가 검증한 대규모 실제 환자-보고서 데이터셋과 직접 비교할 근거는 없다.",
+  "check": "CLEAR의 개념 병목 모델을 우리 기관의 9개 장비별 서브그룹에 적용했을 때 소견별 성능 저하가 특정 장비에 집중되는지 확인해볼 수 있는가?"
+}

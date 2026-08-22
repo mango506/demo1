@@ -1,0 +1,15 @@
+{
+  "id": "unimeddiff-report-guided-image-synthesis",
+  "title": "UniMedDiff: a knowledge-enhanced diffusion model for medical image generation from clinical reports",
+  "authors": ["Lexuan Liu", "Peng Huang", "Bowen Guo", "Shuyu Liang", "Junhu Fu", "Zixia Zhou", "Yuanyuan Wang", "Yi Guo"],
+  "venue": "npj Digital Medicine",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41746-026-03135-x",
+  "abstract": "The scarcity of high-quality medical data restricts the advancement of computer-aided diagnosis. Text-to-image (TTI) generation offers a promising solution through controlled and diverse synthesis but is still hindered by noisy data, complex report structures, and varied disease representations. We propose UniMedDiff, a disease-knowledge-enhanced diffusion framework for synthesizing anatomically accurate and pathologically diverse medical images from clinical reports. Trained on noise-filtered image–text pairs, UniMedDiff extracts and aligns concise text embeddings with visual features from lengthy reports, enabling pathology-aware guidance for medical image generation. It facilitates controllable generation by integrating reports and prior disease knowledge into the diffusion process, achieving favorable performance across multiple datasets and evaluation tasks. On chest X-rays (CXRs), UniMedDiff generates diverse CXRs representing 11 pulmonary pathologies from both in-/out-of-distribution reports. Qualitative and quantitative results demonstrate its state-of-the-art performance in generation quality, computational efficiency and factual correctness. UniMedDiff also exhibits utility in downstream tasks, including unimodal classification and cross-modal report generation, achieving near full-data performance by augmenting 1% real data. Its cross-modality generalization is evaluated through dermoscopy and colonoscopy image synthesis. By bridging clinical reports and visual disease patterns, UniMedDiff advances medical image synthesis for diagnostic research and data augmentation.",
+  "axes": ["라벨 잡음", "다중 소견 판독"],
+  "takeaway": "판독 보고서로부터 흉부 X-ray 영상을 생성하는 UniMedDiff가 실제 데이터 1%만 증강해도 전체 데이터 학습에 근접한 분류 성능을 달성했다.",
+  "relevance": "우리 코호트는 272건 중 무소견이 145건(53%)으로 다수를 차지하고 결절·흉막비후 등 소수 소견은 몇 건에 불과해, 이러한 데이터 부족·불균형 상황에서 보고서 기반 합성 증강이 실제로 유용할 수 있는 세팅과 일치한다.",
+  "caveat": "우리 데이터는 is_synthetic=true로 이미 합성 라벨 기반이라, UniMedDiff가 보고한 '실제 데이터 1% 증강' 효과를 우리 코호트에서 직접 재현·검증할 근거는 없다.",
+  "check": "우리 코호트에서 빈도가 낮은 소견(결절, 흉막비후 등)을 UniMedDiff 방식으로 증강했을 때 분류기 성능이 실제로 개선되는지 별도 실험으로 확인할 수 있는가?"
+}
